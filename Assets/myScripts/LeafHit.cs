@@ -12,10 +12,13 @@ public class LeafHit : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
 	{
+
         leafHits++;
         if (leafHits >= leafHealth) {
 		    leaf.SetTrigger("isLeafDead");
 		    pot.SetTrigger("isLeafDead");
+        } else {
+		    pot.SetTrigger("isLeafBitten");
         }
 	}
 }

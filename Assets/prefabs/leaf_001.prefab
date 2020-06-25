@@ -14,9 +14,11 @@ GameObject:
   - component: {fileID: 4121435758998415560}
   - component: {fileID: 6633329115733321545}
   - component: {fileID: 2490352752279735350}
+  - component: {fileID: 395373017885380860}
+  - component: {fileID: 998577640}
   m_Layer: 0
   m_Name: leaf_001
-  m_TagString: Untagged
+  m_TagString: Leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,16 +122,14 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.028585538, y: -0.15086839}
-  - {x: 0.015522614, y: -0.10065332}
-  - {x: -0.04460065, y: -0.09921238}
-  - {x: -0.13011926, y: -0.016348869}
-  - {x: -0.15550382, y: 0.1262703}
-  - {x: -0.052459583, y: 0.11055753}
-  - {x: 0.056324497, y: 0.023423046}
-  - {x: 0.05399306, y: -0.051933557}
-  - {x: 0.0371923, y: -0.079867035}
-  - {x: 0.033729777, y: -0.15250832}
+  - {x: 0.021221533, y: 0.033328176}
+  - {x: -0.05924675, y: 0.057332993}
+  - {x: -0.1089571, y: 0.05755952}
+  - {x: -0.15398356, y: -0.030366719}
+  - {x: -0.15320335, y: -0.15117106}
+  - {x: -0.07290435, y: -0.14920577}
+  - {x: 0.035033718, y: -0.09096867}
+  - {x: 0.0225216, y: 0.04166019}
 --- !u!50 &6633329115733321545
 Rigidbody2D:
   serializedVersion: 4
@@ -166,3 +166,69 @@ MonoBehaviour:
   leaf: {fileID: 6068433543192652424}
   pot: {fileID: 0}
   leafHealth: 3
+--- !u!114 &395373017885380860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385671048179855026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff135f4bd330de408dea1d1642a205b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToCollideWith: Bug
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: LoseHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionStay:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionExit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &998577640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385671048179855026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff135f4bd330de408dea1d1642a205b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToCollideWith: Bug
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: LoseHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCollisionStay:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionExit:
+    m_PersistentCalls:
+      m_Calls: []
